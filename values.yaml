@@ -88,11 +88,11 @@ controller:
   # -- Default is `false`. Enable provisioner of controller service.
   provisioner: false
   # Pod Numbers
-  replicas: 2
+  replicas: 1
   resources:
     requests:
       cpu: 100m
-      memory: 200Mi
+      memory: 100Mi
   # -- Grace period to allow the CSI Controller pod to shutdown before it is killed
   terminationGracePeriodSeconds: 30
   # -- Affinity for CSI Controller pod
@@ -116,7 +116,7 @@ node:
   resources:
     requests:
       cpu: 100m
-      memory: 200Mi
+      memory: 100Mi
   storageClassShareMount: false
   # -- Grace period to allow the CSI Node Service pods to shutdown before it is killed
   terminationGracePeriodSeconds: 30
@@ -209,6 +209,6 @@ storageClasses:
     resources:
       requests:
         cpu: 100m
-        memory: 200Mi
+        memory: 100Mi
     # -- Image of mount pod. Refer to [this document](https://juicefs.com/docs/csi/examples/mount-image) for more details.
     image: ""
