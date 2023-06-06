@@ -90,6 +90,9 @@ controller:
   # Pod Numbers
   replicas: 1
   resources:
+    limits:
+      cpu: 100m
+      memory: 100Mi
     requests:
       cpu: 100m
       memory: 100Mi
@@ -114,6 +117,9 @@ node:
   enabled: true
   hostNetwork: false
   resources:
+    limits:
+      cpu: 100m
+      memory: 100Mi
     requests:
       cpu: 100m
       memory: 100Mi
@@ -207,6 +213,9 @@ storageClasses:
   mountPod:
     # Mount pod resource requests & limits
     resources:
+      limits:
+        cpu: 100m
+        memory: 100Mi
       requests:
         cpu: 100m
         memory: 100Mi
