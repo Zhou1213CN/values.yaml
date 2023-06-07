@@ -91,11 +91,11 @@ controller:
   replicas: 1
   resources:
     limits:
-      cpu: 80m
-      memory: 100Mi
+      cpu: 50m
+      memory: 50Mi
     requests:
-      cpu: 80m
-      memory: 100Mi
+      cpu: 50m
+      memory: 50Mi
   # -- Grace period to allow the CSI Controller pod to shutdown before it is killed
   terminationGracePeriodSeconds: 30
   # -- Affinity for CSI Controller pod
@@ -118,11 +118,11 @@ node:
   hostNetwork: false
   resources:
     limits:
-      cpu: 80m
-      memory: 100Mi
+      cpu: 50m
+      memory: 50Mi
     requests:
-      cpu: 80m
-      memory: 100Mi
+      cpu: 50m
+      memory: 50Mi
   storageClassShareMount: false
   # -- Grace period to allow the CSI Node Service pods to shutdown before it is killed
   terminationGracePeriodSeconds: 30
@@ -214,10 +214,10 @@ storageClasses:
     # Mount pod resource requests & limits
     resources:
       limits:
-        cpu: 80m
-        memory: 100Mi
+        cpu: 50m
+        memory: 50Mi
       requests:
-        cpu: 80m
-        memory: 100Mi
+        cpu: 50m
+        memory: 50Mi
     # -- Image of mount pod. Refer to [this document](https://juicefs.com/docs/csi/examples/mount-image) for more details.
     image: ""
